@@ -1,9 +1,8 @@
 {
-  "name": "angular-seed",
+  "name": "PPF",
+  "description": "A POC project written in AngularJS",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
@@ -17,7 +16,7 @@
     "postinstall": "bower install",
 
     "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000 -c-1",
+    "start": "http-server -a localhost -p 8080 -c-1",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
