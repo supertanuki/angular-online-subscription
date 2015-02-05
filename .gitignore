@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+logs/*
+!.gitkeep
+node_modules/
+bower_components/
+tmp
+.DS_Store
+.idea
+=======
+>>>>>>> 74f4c3e57687396b64508e2463b5ff7203ab9abd
+.project
