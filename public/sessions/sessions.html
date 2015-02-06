@@ -1,0 +1,17 @@
+<div class="row" data-toggle="buttons">
+
+  <div class="col-xs-12 col-sm-3" ng-repeat="session in sessions">
+    <div class="well">
+        <h2>{{session.label}}</h2>
+        <p>Formation id={{session.id}}</p>
+        <p>
+            <label class="btn btn-default btn-block">
+                <input type="radio" name="options" id="option{{session.id}}" value="{{session.id}}" autocomplete="off">
+                <span class="glyphicon glyphicon-ok"></span>
+                Sélectionner
+            </label>
+        </p>
+    </div>
+  </div>
+  
+</div>

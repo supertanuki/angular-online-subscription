@@ -28,3 +28,17 @@
   content: "";
   padding: 0;
 }
+
+/* session radio selection */
+.btn span.glyphicon {               
+    opacity: 0;             
+}
+
+.btn.active span.glyphicon {                
+    opacity: 1;             
+}
+
+[data-toggle="buttons"] .btn > input[type="radio"], [data-toggle="buttons"] .btn > input[type="checkbox"] {
+    display: none;
+}
+/* /session radio selection */

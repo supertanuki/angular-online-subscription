@@ -8,7 +8,8 @@ module.exports = function(config){
       'public/bower_components/angular-route/angular-route.js',
       'public/bower_components/angular-mocks/angular-mocks.js',
       'public/components/**/*.js',
-      'public/view*/**/*.js'
+      'public/js/**/*.js',
+      'public/js/*.js'
     ],
 
     autoWatch : true,
