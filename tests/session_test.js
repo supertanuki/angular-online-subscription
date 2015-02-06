@@ -6,8 +6,8 @@ describe('myApp.sessions module', function() {
 
 	describe('sessions controller', function(){
 
-		it('Should sessionsCtrl exists', inject(function($controller) {		
-			var sessionsCtrl = $controller('SessionsCtrl');
+		it('Should SessionCtrl exists', inject(function($controller) {		
+			var sessionsCtrl = $controller('SessionCtrl');
 			expect(sessionsCtrl).toBeDefined();
     	}));
 		

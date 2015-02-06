@@ -7,4 +7,5 @@ tmp
 .idea
 .project
 .settings
+.buildpath
 *.log

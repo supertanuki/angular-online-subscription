@@ -6,6 +6,13 @@ angular.module('myApp', [
   'myApp.services',
   'myApp.sessions'
 ]).
+
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/sessions'});
+  $routeProvider
+  	.when('/about', {
+  		templateUrl: 'view/page/about.html'
+  	})
+  	.otherwise({
+  		redirectTo: '/sessions'
+	});
 }]);
