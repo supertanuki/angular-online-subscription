@@ -35,18 +35,16 @@
 
 						<div class="progress">
 							<div ng-if="session.maxTrainee - session.subscribedTrainees == 0"
-								class="progress-bar progress-bar-danger" tooltip-placement="top"
-								tooltip="Nombre d'inscrits maximum atteint"
-								tooltip-trigger="mouseenter" style="width: 100%">
+								class="progress-bar progress-bar-danger"
+								role="progressbar"
+								style="width:100%">
 								Indisponible
 							</div>
-
+							
 							<div ng-if="session.subscribedTrainees &lt; session.maxTrainee"
 								class="progress-bar progress-bar-success"
-								tooltip-placement="top"
-								tooltip="Nombre de places encore disponibles"
-								tooltip-trigger="mouseenter"
-								style="width: {{100 * (session.maxTrainee - session.subscribedTrainees)/session.maxTrainee}}%">
+								role="progressbar"
+								style="width:{{100 * (session.maxTrainee - session.subscribedTrainees)/session.maxTrainee}}%">
 								{{session.maxTrainee - session.subscribedTrainees}} places dispo.
 							</div>
 						</div>
