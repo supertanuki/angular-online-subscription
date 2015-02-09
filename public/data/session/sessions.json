@@ -1,22 +1,71 @@
-[
-    {
-        "id": 1,
-        "label": "Gestion de projet et JIRA"
-    },
-    {
-        "id": 5,
-        "label": "Maitriser ACCESS comme un pro"
-    },
-    {
-        "id": 2,
-        "label": "Développement personnel"
-    },
-    {
-        "id": 6,
-        "label": "Des présentations professionnelles"
-    },
-    {
-        "id": 7,
-        "label": "Maitriser Excel"
-    }
-]
+{
+    "courseLabel": "Maitriser ACCESS comme un pro",
+    "organismLabel": "MediaBox",
+    "sessions" : [
+        {
+            "id": 1,            
+            "dateBegin": "2015-05-20",
+            "dateEnd": "2015-05-24",
+            "hourBegin": "09:00",
+            "hourEnd": "17:00",
+            "nbDay": 5,
+            "nbHour" : 35,
+            "minTrainee": 5,
+            "maxTrainee": 10,
+            "subscribedTrainees": 7,
+            "place": "Paris"
+        },
+        {
+            "id": 2,
+            "dateBegin": "2015-05-27",
+            "dateEnd": "2015-06-01",
+            "hourBegin": "09:00",
+            "hourEnd": "17:00",
+            "nbDay": 5,
+            "nbHour" : 35,
+            "minTrainee": 7,
+            "maxTrainee": 12,
+            "subscribedTrainees": 2,
+            "place": "Cergy"
+        },
+        {
+            "id": 3,
+            "dateBegin": "2015-06-04",
+            "dateEnd": "2015-06-08",
+            "hourBegin": "09:30",
+            "hourEnd": "17:30",
+            "nbDay": 5,
+            "nbHour" : 35,
+            "minTrainee": 4,
+            "maxTrainee": 8,
+            "subscribedTrainees": 8,
+            "place": "Paris"
+        },
+        {
+            "id": 4,
+            "dateBegin": "2015-06-04",
+            "dateEnd": "2015-06-08",
+            "hourBegin": "09:30",
+            "hourEnd": "17:30",
+            "nbDay": 5,
+            "nbHour" : 35,
+            "minTrainee": 4,
+            "maxTrainee": 10,
+            "subscribedTrainees": 8,
+            "place": "Paris"
+        },
+        {
+            "id": 5,
+            "dateBegin": "2015-09-10",
+            "dateEnd": "2015-09-14",
+            "hourBegin": "09:30",
+            "hourEnd": "17:15",
+            "nbDay": 5,
+            "nbHour" : 35,
+            "minTrainee": 5,
+            "maxTrainee": 8,
+            "subscribedTrainees": 8,
+            "place": "Cergy"
+        }
+    ]
+}

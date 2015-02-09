@@ -1,0 +1,58 @@
+<h1>
+	{{sessions.courseLabel}} <small>- {{sessions.organismLabel}}</small>
+</h1>
+<hr>
+
+
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+	   <p class="text-center">Merci de sélectionner la session souhaitée</p>
+	   
+		<div ng-repeat="session in sessions.sessions">
+			<h3 class="text-center" ng-if="(session.dateBegin | date:'MMMM yyyy' | showOnce)">
+				<span class="label label-primary"> {{session.dateBegin | date:'MMMM yyyy'}}</span>
+			</h3>
+
+			<div class="thumbnail">
+				<div class="row">
+					<div class="col-xs-2">
+						<label ng-if="session.maxTrainee - session.subscribedTrainees > 0" class="toggle-radio">
+	                        <input type="radio" name="selectedSession" id="selectedSession{{session.id}}" value="{{session.id}}" autocomplete="off">
+	                        <span class="glyphicon glyphicon-ok"></span>
+	                    </label>
+					</div>
+					<div class="col-xs-10">
+
+						<h4>
+							<span class="glyphicon glyphicon-calendar"></span>
+							Du {{session.dateBegin | date:'dd/MM/yyyy'}} au {{session.dateEnd | date:'dd/MM/yyyy'}}
+						</h4>
+						<p>
+							<span class="glyphicon glyphicon-map-marker"></span>
+							{{session.place}} <span class="glyphicon glyphicon-user"></span>
+							{{session.subscribedTrainees}} inscrits
+						</p>
+
+						<div class="progress">
+							<div ng-if="session.maxTrainee - session.subscribedTrainees == 0"
+								class="progress-bar progress-bar-danger" tooltip-placement="top"
+								tooltip="Nombre d'inscrits maximum atteint"
+								tooltip-trigger="mouseenter" style="width: 100%">
+								Indisponible
+							</div>
+
+							<div ng-if="session.subscribedTrainees &lt; session.maxTrainee"
+								class="progress-bar progress-bar-success"
+								tooltip-placement="top"
+								tooltip="Nombre de places encore disponibles"
+								tooltip-trigger="mouseenter"
+								style="width: {{100 * (session.maxTrainee - session.subscribedTrainees)/session.maxTrainee}}%">
+								{{session.maxTrainee - session.subscribedTrainees}} places dispo.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

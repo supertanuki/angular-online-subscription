@@ -1,17 +1,59 @@
-<div class="row" data-toggle="buttons">
+<h1>{{sessions.courseLabel}} <small>- {{sessions.organismLabel}}</small></h1>
+<p>Merci de sélectionner la session souhaitée</p>
 
-  <div class="col-xs-12 col-sm-3" ng-repeat="session in sessions">
-    <div class="well">
-        <h2>{{session.label}}</h2>
-        <p>Formation id={{session.id}}</p>
-        <p>
-            <label class="btn btn-success btn-block">
-                <input type="radio" name="options" id="option{{session.id}}" value="{{session.id}}" autocomplete="off">
-                <span class="glyphicon glyphicon-ok"></span>
-                Sélectionner
-            </label>
-        </p>
-    </div>
-  </div>
-  
+<div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+	    <tr>
+	        <th>Dates</th>
+	        <th>Lieu</th>
+            <th>Inscrits</th>
+	        <th>Places disponibles</th>
+	        <th></th>
+        </tr>
+    </thead>
+    
+    <tbody data-toggle="buttons">
+	    <tr ng-repeat="session in sessions.sessions">
+	        <td>
+	           <span class="glyphicon glyphicon-calendar"></span>
+	           Du {{session.dateBegin}} au {{session.dateEnd}}
+            </td>
+	        <td><span class="glyphicon glyphicon-map-marker"></span> {{session.place}}</td>
+            <td>
+               <span class="glyphicon glyphicon-user"></span> {{session.subscribedTrainees}}
+            </td>
+	        <td>
+				<div class="progress">
+					<div ng-if="session.maxTrainee - session.subscribedTrainees == 0"
+					   class="progress-bar progress-bar-danger"
+					   tooltip-placement="top" tooltip="Nombre d'inscrits maximum atteint" tooltip-trigger="mouseenter"
+					   style="width: 100%">
+						  {{session.maxTrainee - session.subscribedTrainees}}
+					</div>
+                  
+					<div ng-if="session.subscribedTrainees < session.maxTrainee"
+					   class="progress-bar progress-bar-success"
+					   tooltip-placement="top" tooltip="Nombre de places encore disponibles" tooltip-trigger="mouseenter"
+					   style="width: {{100 * (session.maxTrainee - session.subscribedTrainees) / session.maxTrainee}}%">
+					     {{session.maxTrainee - session.subscribedTrainees}}
+					</div>
+				</div>
+            </td>
+            <td>
+                <label class="btn btn-success" ng-if="session.maxTrainee - session.subscribedTrainees > 0">
+                    <input type="radio" name="selectedSession" id="selectedSession{{session.id}}" value="{{session.id}}" autocomplete="off">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    Sélectionner
+                </label>
+                
+                <label class="btn btn-default btn-sm" ng-if="session.maxTrainee - session.subscribedTrainees == 0">
+                    <input type="radio" name="waitListSession" id="waitListSession{{session.id}}" value="{{session.id}}" autocomplete="off">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    S'inscrire sur liste d'attente
+                </label>
+            </td>
+	    </tr>
+    </tbody>
+  </table>
 </div>

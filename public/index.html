@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="fr" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="fr" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="fr" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="fr" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,35 +32,68 @@
 		    <div class="collapse navbar-collapse" id="navbar-collapse">
 		      <ul class="nav navbar-nav navbar-right">
 		        <li><a href="/#/about">About</a></li>
-		        <li><a href="/#/sessions">Sessions</a></li>
-		        <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-		          <ul class="dropdown-menu" role="menu">
-		            <li><a href="#">Action</a></li>
-		            <li><a href="#">Another action</a></li>
-		            <li><a href="#">Something else here</a></li>
-		            <li class="divider"></li>
-		            <li><a href="#">Separated link</a></li>
-		          </ul>
-		        </li>
+		        <li><a href="/#/sessions">Sessions table</a></li>
+		        <li><a href="/#/sessions/v2">Sessions list</a></li>
+<!-- 		        <li class="dropdown"> -->
+<!-- 		          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a> -->
+<!-- 		          <ul class="dropdown-menu" role="menu"> -->
+<!-- 		            <li><a href="">Action</a></li> -->
+<!-- 		            <li><a href="">Another action</a></li> -->
+<!-- 		            <li><a href="">Something else here</a></li> -->
+<!-- 		            <li class="divider"></li> -->
+<!-- 		            <li><a href="">Separated link</a></li> -->
+<!-- 		          </ul> -->
+<!-- 		        </li> -->
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 	  </div>
 	</nav>
 	
+
+	
     <div class="container" ng-view>
 	</div>
-	
+
+<!-- 	
+<label class="toggle-radio">
+    <input type="radio" name="radio" id="0" value="0" autocomplete="off">
+    <span class="glyphicon glyphicon-ok"></span>
+</label>
+<label class="toggle-radio">
+    <input type="radio" name="radio" id="1" value="1" autocomplete="off">
+    <span class="glyphicon glyphicon-ok"></span>
+</label>
+<label class="toggle-radio">
+    <input type="radio" name="radio" id="2" value="2" autocomplete="off">
+    <span class="glyphicon glyphicon-ok"></span>
+</label>
+
+/
+
+<label class="toggle-radio">
+    <input type="radio" name="radioX" id="1" value="1" autocomplete="off">
+    <span class="glyphicon glyphicon-ok"></span>
+</label>
+<label class="toggle-radio">
+    <input type="radio" name="radioX" id="2" value="2" autocomplete="off">
+    <span class="glyphicon glyphicon-ok"></span>
+</label>
+-->
 	
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>  
 	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 	
 	<script src="app.js"></script>
 	<script src="service/services.js"></script>
+	<script src="filter/filters.js"></script>
 	<script src="controller/session.js"></script>
+	<script src="components/view/toggle-radio.js"></script>
 </body>
 </html>

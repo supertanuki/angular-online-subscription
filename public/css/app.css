@@ -29,16 +29,43 @@
   padding: 0;
 }
 
+/*
+Original Bootstrap's CSS depends on empty href attributes to style cursors for several components (pagination, tabs etc.).
+But in AngularJS adding empty href attributes to link tags will cause unwanted route changes.
+This is why we need to remove empty href attributes from directive templates and as a result styling is not applied correctly.
+The remedy is simple, just add the following styling to the application:
+*/ 
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 /* session radio selection */
-.btn span.glyphicon {               
-    opacity: 0;             
+.toggle-radio span.glyphicon {               
+    color:#fafafa;
+	font-size:80px;
+	cursor:pointer;
 }
 
-.btn.active span.glyphicon {                
-    opacity: 1;             
+.toggle-radio.active span.glyphicon {                
+    color:#5cb85c;    
 }
 
-[data-toggle="buttons"] .btn > input[type="radio"], [data-toggle="buttons"] .btn > input[type="checkbox"] {
+.toggle-radio input[type="radio"] {
+    display: none;
+}
+/* /session radio selection */
+
+.thumbnail {
+	color:#555;
+}
+
+
+/* session radio selection */
+.btn span.glyphicon {
+    opacity: 0;
+}
+.btn.active span.glyphicon {
+    opacity: 1;
+}
+[data-toggle="buttons"] .btn input[type="radio"], [data-toggle="buttons"] .btn input[type="checkbox"] {
     display: none;
 }
 /* /session radio selection */
