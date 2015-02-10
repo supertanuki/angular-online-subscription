@@ -20,6 +20,12 @@
 	                        <input type="radio" name="selectedSession" id="selectedSession{{session.id}}" value="{{session.id}}" autocomplete="off">
 	                        <span class="glyphicon glyphicon-ok"></span>
 	                    </label>
+	                    
+	                    <label ng-if="session.maxTrainee == session.subscribedTrainees" class="toggle-radio wait-list">
+                            <input type="radio" name="waitListSession" id="waitListSession{{session.id}}" value="{{session.id}}" autocomplete="off">
+                            <span class="glyphicon glyphicon-ok"></span>
+                            <span class="wait-list-label">Liste d'attente</span>
+                        </label>
 					</div>
 					<div class="col-xs-10">
 

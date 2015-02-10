@@ -38,23 +38,35 @@ The remedy is simple, just add the following styling to the application:
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 /* session radio selection */
-.toggle-radio span.glyphicon {               
-    color:#fafafa;
-	font-size:80px;
-	cursor:pointer;
+.toggle-radio {               
+    color: #fafafa;
+	font-size: 80px;
+	text-align:center;
 }
-
-.toggle-radio.active span.glyphicon {                
-    color:#5cb85c;    
+.toggle-radio.wait-list {               
+    color: #fafafa;
+    font-size: 40px;
 }
-
+.toggle-radio {
+    cursor: pointer;
+}
+.toggle-radio .wait-list-label {
+	font-size: 10px;
+	font-weight: bold;
+	display:block;
+	color: #ddd;
+	
+}
+.toggle-radio.active, .toggle-radio.active .wait-list-label {                
+    color: #5cb85c;    
+}
 .toggle-radio input[type="radio"] {
     display: none;
 }
 /* /session radio selection */
 
 .thumbnail {
-	color:#555;
+	color: #555;
 }
 
 
