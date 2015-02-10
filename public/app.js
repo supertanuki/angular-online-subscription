@@ -5,12 +5,15 @@
 	angular.module('myApp', [
 	  'ngRoute',
 	  'ui.bootstrap',
+	  'ui.calendar',
 	  'myApp.filters',
 	  'myApp.services',
 	  'myApp.sessions'
 	])
 
-	.config(['$routeProvider', function($routeProvider) {
+	.config(['$routeProvider', config])
+	
+	function config($routeProvider) {
 	  $routeProvider
 	  	.when('/about', {
 	  		templateUrl: 'view/page/about.html'
@@ -18,6 +21,5 @@
 	  	.otherwise({
 	  		redirectTo: '/sessions'
 		});
-	}])
-	
+	}
 })();

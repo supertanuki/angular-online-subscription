@@ -1,5 +1,5 @@
 <h1>
-	{{sessions.courseLabel}} <small>- {{sessions.organismLabel}}</small>
+	{{stage.courseLabel}} <small>- {{stage.organismLabel}}</small>
 </h1>
 <hr>
 
@@ -8,7 +8,7 @@
 	<div class="col-xs-12 col-sm-6 col-sm-offset-3">
 	   <div class="alert alert-warning text-center">Merci de cocher la session souhaitée</div>
 	   
-		<div ng-repeat="session in sessions.sessions">
+		<div ng-repeat="session in stage.sessions">
 			<h3 class="text-center" ng-if="(session.dateBegin | date:'MMMM yyyy' | showOnce)">
 				<span class="label label-primary label-month">{{session.dateBegin | date:'MMMM yyyy'}}</span>
 			</h3>

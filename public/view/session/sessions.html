@@ -1,8 +1,12 @@
-<h1>{{sessions.courseLabel}} <small>- {{sessions.organismLabel}}</small></h1>
+<h1>{{stage.courseLabel}} <small>- {{stage.organismLabel}}</small></h1>
 
 <hr>
 
 <div class="alert alert-warning text-center">Merci de sélectionner la session souhaitée</div>
+
+<div class="row">
+    <div ui-calendar="uiConfig.calendar" ng-model="events" class="col-md-4"></div>
+</div> 
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped table-hover">
@@ -17,7 +21,7 @@
     </thead>
     
     <tbody data-toggle="buttons">
-	    <tr ng-repeat="session in sessions.sessions">
+	    <tr ng-repeat="session in stage.sessions">
 	        <td>
 	           <span class="glyphicon glyphicon-calendar"></span>
 	           Du {{session.dateBegin | date:'dd/MM/yyyy'}} au {{session.dateEnd | date:'dd/MM/yyyy'}}
