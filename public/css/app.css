@@ -69,6 +69,10 @@ The remedy is simple, just add the following styling to the application:
 	color: #555;
 }
 
+.label-month {
+	text-transform: capitalize;
+}
+
 
 /* session radio selection */
 .btn span.glyphicon {

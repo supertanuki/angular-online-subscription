@@ -12,7 +12,7 @@
             "nbHour" : 35,
             "minTrainee": 5,
             "maxTrainee": 10,
-            "subscribedTrainees": 7,
+            "subscribedTrainees": 8,
             "place": "Paris"
         },
         {
@@ -51,7 +51,7 @@
             "nbHour" : 35,
             "minTrainee": 4,
             "maxTrainee": 10,
-            "subscribedTrainees": 8,
+            "subscribedTrainees": 9,
             "place": "Paris"
         },
         {

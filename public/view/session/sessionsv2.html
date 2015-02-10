@@ -6,11 +6,11 @@
 
 <div class="row">
 	<div class="col-xs-12 col-sm-6 col-sm-offset-3">
-	   <p class="text-center">Merci de sélectionner la session souhaitée</p>
+	   <div class="alert alert-warning text-center">Merci de cocher la session souhaitée</div>
 	   
 		<div ng-repeat="session in sessions.sessions">
 			<h3 class="text-center" ng-if="(session.dateBegin | date:'MMMM yyyy' | showOnce)">
-				<span class="label label-primary"> {{session.dateBegin | date:'MMMM yyyy'}}</span>
+				<span class="label label-primary label-month">{{session.dateBegin | date:'MMMM yyyy'}}</span>
 			</h3>
 
 			<div class="thumbnail">
@@ -47,11 +47,15 @@
 								Indisponible
 							</div>
 							
-							<div ng-if="session.subscribedTrainees &lt; session.maxTrainee"
+							<div ng-if="session.subscribedTrainees < session.maxTrainee"
 								class="progress-bar progress-bar-success"
 								role="progressbar"
 								style="width:{{100 * (session.maxTrainee - session.subscribedTrainees)/session.maxTrainee}}%">
-								{{session.maxTrainee - session.subscribedTrainees}} places dispo.
+								<ng-pluralize count="(session.maxTrainee - session.subscribedTrainees)"
+                                    when="{'1': '1',
+                                           '2' : '2 places',
+                                           'other': '{} places disponibles'}">
+                                </ng-pluralize>
 							</div>
 						</div>
 					</div>

@@ -1,5 +1,8 @@
 <h1>{{sessions.courseLabel}} <small>- {{sessions.organismLabel}}</small></h1>
-<p>Merci de sélectionner la session souhaitée</p>
+
+<hr>
+
+<div class="alert alert-warning text-center">Merci de sélectionner la session souhaitée</div>
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped table-hover">
@@ -17,7 +20,7 @@
 	    <tr ng-repeat="session in sessions.sessions">
 	        <td>
 	           <span class="glyphicon glyphicon-calendar"></span>
-	           Du {{session.dateBegin}} au {{session.dateEnd}}
+	           Du {{session.dateBegin | date:'dd/MM/yyyy'}} au {{session.dateEnd | date:'dd/MM/yyyy'}}
             </td>
 	        <td><span class="glyphicon glyphicon-map-marker"></span> {{session.place}}</td>
             <td>
@@ -45,12 +48,14 @@
                     <input type="radio" name="selectedSession" id="selectedSession{{session.id}}" value="{{session.id}}" autocomplete="off">
                     <span class="glyphicon glyphicon-ok"></span>
                     Sélectionner
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                 </label>
                 
                 <label class="btn btn-default btn-sm" ng-if="session.maxTrainee - session.subscribedTrainees == 0">
                     <input type="radio" name="waitListSession" id="waitListSession{{session.id}}" value="{{session.id}}" autocomplete="off">
                     <span class="glyphicon glyphicon-ok"></span>
                     S'inscrire sur liste d'attente
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                 </label>
             </td>
 	    </tr>
