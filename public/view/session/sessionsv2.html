@@ -16,12 +16,14 @@
 			<div class="thumbnail">
 				<div class="row">
 					<div class="col-xs-2">
-						<label ng-if="session.maxTrainee - session.subscribedTrainees > 0" class="toggle-radio">
+						<label ng-if="session.maxTrainee - session.subscribedTrainees > 0" class="toggle-radio"
+						  tooltip-placement="top" tooltip="S'inscrire" tooltip-trigger="mouseenter">
 	                        <input type="radio" name="selectedSession" id="selectedSession{{session.id}}" value="{{session.id}}" autocomplete="off">
 	                        <span class="glyphicon glyphicon-ok"></span>
 	                    </label>
 	                    
-	                    <label ng-if="session.maxTrainee == session.subscribedTrainees" class="toggle-radio wait-list">
+	                    <label ng-if="session.maxTrainee == session.subscribedTrainees" class="toggle-radio wait-list"
+	                       tooltip-placement="top" tooltip="Se mettre sur liste d'attente" tooltip-trigger="mouseenter">
                             <input type="radio" name="waitListSession" id="waitListSession{{session.id}}" value="{{session.id}}" autocomplete="off">
                             <span class="glyphicon glyphicon-ok"></span>
                             <span class="wait-list-label">Liste d'attente</span>
@@ -43,14 +45,16 @@
 							<div ng-if="session.maxTrainee - session.subscribedTrainees == 0"
 								class="progress-bar progress-bar-danger"
 								role="progressbar"
-								style="width:100%">
+								ng-style="{ 'min-width': '2em', 'width': '100%'}"
+								>
 								Indisponible
 							</div>
-							
 							<div ng-if="session.subscribedTrainees < session.maxTrainee"
 								class="progress-bar progress-bar-success"
 								role="progressbar"
-								style="width:{{100 * (session.maxTrainee - session.subscribedTrainees)/session.maxTrainee}}%">
+								aria-valuenow="{{session.maxTrainee - session.subscribedTrainees}}" aria-valuemin="0" aria-valuemax="{{session.maxTrainee}}"
+                                ng-style="{ 'min-width': '2em', 'width': ((100 * (session.maxTrainee - session.subscribedTrainees)/session.maxTrainee) | number:0) + '%' }"
+								>
 								<ng-pluralize count="(session.maxTrainee - session.subscribedTrainees)"
                                     when="{'1': '1',
                                            '2' : '2 places',
