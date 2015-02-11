@@ -5,7 +5,7 @@
 	angular.module('myApp', [
 	  'ngRoute',
 	  'ui.bootstrap',
-	  'ui.calendar',
+	  // 'ui.calendar',
 	  'myApp.filters',
 	  'myApp.services',
 	  'myApp.sessions'

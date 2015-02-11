@@ -19,6 +19,9 @@
 	
 	
 	function SessionCtrl($scope, $filter, Session) {
+		
+		// for calendar.ui
+		/*
 		$scope.uiConfig = {
 			 calendar:{
 				 height: 200,
@@ -30,11 +33,12 @@
 			 }
 		};
 		
-		var events = [];
+		$scope.events = [[ {title: 'Du 15/02/2015 au 19/02/2015', start: new Date(2015,1,15), end: new Date(2015,1,19)} ]];
+		*/
 		
 		$scope.stage = Session.query();
 		
-		$scope.events = [[ {title: 'Du 15/02/2015 au 19/02/2015', start: new Date(2015,1,15), end: new Date(2015,1,19)} ]];
+		
 		
 		/*
 		 * function (response) {
