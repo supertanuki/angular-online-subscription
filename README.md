@@ -1,3 +1,3 @@
-# PPF
+# Angular Online subscription
 
-An application POC written in AngularJS
+A proof of concept written in AngularJS
